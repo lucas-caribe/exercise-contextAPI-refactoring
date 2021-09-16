@@ -1,10 +1,16 @@
 import React from 'react';
-import './App.css';
+
+import CarsProvider from './context/CarsProvider';
+
 import Cars from './Cars';
+
+import './App.css';
 
 function App() {
   return (
-    <Cars />
+    <CarsProvider>
+      <Cars />
+    </CarsProvider>
   );
 }
 
