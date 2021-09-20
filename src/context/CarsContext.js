@@ -1,6 +1,6 @@
 import { createContext } from 'react';
 
-const initialState = {
+export const initialState = {
   blue: false,
   red: false,
   yellow: false,

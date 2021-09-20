@@ -1,14 +1,23 @@
 import React from 'react';
+
+import CarsProvider from './context/CarsProvider';
+import TrafficProvider from './context/TrafficProvider';
+
 import TrafficSignal from './TrafficSignal';
-import './App.css';
 import Cars from './Cars';
+
+import './App.css';
 
 function App() {
   return (
-    <div className="container">
-      <Cars />
-      <TrafficSignal />
-    </div>
+    <TrafficProvider>
+      <CarsProvider>
+        <div className="container">
+          <Cars />
+          <TrafficSignal />
+        </div>
+      </CarsProvider>
+    </TrafficProvider>
   );
 }
 
